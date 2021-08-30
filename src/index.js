@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./components/app";
+import ErrorBoundry from "./components/error-boundry";
 
 ReactDOM.render(
-  <App/>, document.getElementById('root')
+    <ErrorBoundry>
+        <App/>
+    </ErrorBoundry>, document.getElementById('root')
 );
 
