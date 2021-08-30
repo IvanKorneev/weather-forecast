@@ -1,0 +1,1 @@
+ export const arr = ['Guide', 'API', 'Pricing', 'Maps', 'Our Initiatives' ,' Partners', 'Blog', 'Marketplace', 'Sing in', 'Support']
