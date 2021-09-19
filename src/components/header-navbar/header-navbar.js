@@ -2,15 +2,12 @@ import React from "react";
 import './header-navbar.sass';
 import {arr} from "../../helpers";
 
-
-
 const HeaderNavbar = () => {
-
 
     const elements = arr.map((item, index) => {
         return (
             <li key={index}>
-               <a href='#'>{item}</a>
+                <span>{item}</span>
             </li>
         )
     })
