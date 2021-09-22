@@ -1,5 +1,5 @@
 const initialState = {
-    location: [],
+    weatherData: {},
     error: null
 };
 export default  (state = initialState, action) => {
@@ -7,7 +7,7 @@ export default  (state = initialState, action) => {
         case 'LOCATION_LOADED':
             return {
                 ...state,
-                location: action.payload
+                weatherData: action.payload
             };
 
         default:

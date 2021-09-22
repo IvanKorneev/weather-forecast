@@ -1,29 +1,29 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {fetchLocation} from "../../store/actions";
+import Location from "../../components/location";
 
 
-const ContainerLocation = ({location, fetchLocation}) => {
+const ContainerLocation = ({weatherData, fetchLocation}) => {
+    const {name, weather, coord, main, wind} = weatherData.weatherData;
+
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((position) => {
-
             fetchLocation(position.coords.latitude, position.coords.longitude)
         })
 
-    }, []);
+    }, [fetchLocation]);
 
-
-    console.log(location, 111)
     return (
         <div>
-
+            <Location city={name} weather={weather} coord={coord} main={main} wind={wind}/>
         </div>
     )
 }
 const mapStateToProps = (state) => {
     return {
-        location: state.location
+        weatherData: state.weather
     }
 };
 const mapDispatchToProps = {
