@@ -1,8 +1,9 @@
 import React from "react";
-import './location.sass';
+import './weather-by-location.sass';
 import Weather from "../weather";
 
-const Location = ({city, weather = [], coord, main, wind}) => {
+const WeatherByLocation = ({city, weather = [], coord, main, wind}) => {
+
     const elements = weather.map((item, index) => {
         return (
             <li key={index + 1}>
@@ -16,5 +17,5 @@ const Location = ({city, weather = [], coord, main, wind}) => {
         </div>
     )
 }
-export default Location;
+export default WeatherByLocation;
 

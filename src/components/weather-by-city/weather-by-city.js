@@ -1,6 +1,6 @@
 import React from "react";
 
-const WeatherCity = () => {
+const WeatherByCity = () => {
     return (
         <div>
             <form>
@@ -10,4 +10,4 @@ const WeatherCity = () => {
         </div>
     )
 }
-export default WeatherCity;
+export default WeatherByCity;

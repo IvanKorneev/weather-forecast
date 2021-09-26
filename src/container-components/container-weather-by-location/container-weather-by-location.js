@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {fetchLocation} from "../../store/actions";
-import Location from "../../components/location";
+import WeatherByLocation from "../../components/weather-by-location";
 
 
-const ContainerLocation = ({weatherData, fetchLocation}) => {
+const ContainerWeatherByLocation = ({weatherData, fetchLocation}) => {
     const {name, weather, coord, main, wind} = weatherData.weatherData;
 
 
@@ -17,7 +17,7 @@ const ContainerLocation = ({weatherData, fetchLocation}) => {
 
     return (
         <div>
-            <Location city={name} weather={weather} coord={coord} main={main} wind={wind}/>
+            <WeatherByLocation city={name} weather={weather} coord={coord} main={main} wind={wind}/>
         </div>
     )
 }
@@ -30,4 +30,4 @@ const mapDispatchToProps = {
     fetchLocation
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContainerLocation);
+export default connect(mapStateToProps, mapDispatchToProps)(ContainerWeatherByLocation);

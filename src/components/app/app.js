@@ -1,14 +1,15 @@
 import React from "react";
 import './app.css'
 import HeaderNavbar from "../header-navbar/header-navbar";
-import ContainerLocation from "../../container-components/container-location/container-location";
-import ContainerWeatherCity from "../../container-components/container-wether-city";
+import ContainerWeatherCity from "../../container-components/container-wether-by-city";
+import ContainerWeatherByLocation
+    from "../../container-components/container-weather-by-location/container-weather-by-location";
 
 const App = () => {
     return (
         <div>
             <HeaderNavbar/>
-            <ContainerLocation/>
+            <ContainerWeatherByLocation/>
             <ContainerWeatherCity/>
         </div>
     )
