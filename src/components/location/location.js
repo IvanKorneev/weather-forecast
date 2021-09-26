@@ -3,7 +3,6 @@ import './location.sass';
 import Weather from "../weather";
 
 const Location = ({city, weather = [], coord, main, wind}) => {
-    console.log(weather)
     const elements = weather.map((item, index) => {
         return (
             <li key={index + 1}>

@@ -13,5 +13,17 @@ export const getLocation = async (_lat, _long) => {
     }
 };
 
+export const getWeatherCity  = async (data)=>{
+    try {
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${_apiKey}`)
+        return response.data
+    } catch (err){
+        console.error(err.toJSON())
+    }
+}
+
+console.log(getWeatherCity('London'))
+
+
 
 
