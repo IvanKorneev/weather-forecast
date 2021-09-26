@@ -22,8 +22,6 @@ export const getWeatherCity  = async (data)=>{
     }
 }
 
-console.log(getWeatherCity('London'))
-
 
 
 

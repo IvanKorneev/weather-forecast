@@ -1,9 +1,10 @@
 import React from "react";
+import WeatherCity from "../../components/weather-city";
 
 const ContainerWeatherCity = () => {
     return (
         <div>
-            <input type='text'/>
+            <WeatherCity/>
         </div>
     )
 
