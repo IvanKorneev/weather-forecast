@@ -1,11 +1,15 @@
 import React from "react";
+import './weather-by-city.sass';
 
-const WeatherByCity = () => {
+const WeatherByCity = ({onChangeLabel, onSubmitNameCity, search,weatherByCity}) => {
+
     return (
-        <div>
-            <form>
-                <input type='text'/>
-                <button>Submit</button>
+        <div className='weather-by-city'>
+            <form onSubmit={onSubmitNameCity()}>
+                <div className='weather-by-city-container'>
+                <input type='text' placeholder='Type City' onChange={onChangeLabel()} value={search}/>
+                <button>Search</button>
+                </div>
             </form>
         </div>
     )

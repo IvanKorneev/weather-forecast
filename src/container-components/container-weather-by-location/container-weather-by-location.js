@@ -7,12 +7,10 @@ import WeatherByLocation from "../../components/weather-by-location";
 const ContainerWeatherByLocation = ({weatherData, fetchLocation}) => {
     const {name, weather, coord, main, wind} = weatherData.weatherData;
 
-
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((position) => {
             fetchLocation(position.coords.latitude, position.coords.longitude)
         })
-
     }, [fetchLocation]);
 
     return (
@@ -28,6 +26,6 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = {
     fetchLocation
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContainerWeatherByLocation);

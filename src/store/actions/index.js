@@ -1,4 +1,5 @@
-import {getWeatherByLocation} from "../../api/api";
+import {getWeatherByCityy, getWeatherByLocation} from "../../api/api";
+
 
 const locationLoaded = (newLocation) => {
     return {
@@ -19,6 +20,12 @@ const locationError = (error) => {
         payload: error
     }
 };
+const getWeatherByCityErorr = (error)=>{
+    return{
+        type: 'GET_WEATHER_BY_CITY_ERROR',
+        payload: error
+    }
+}
 
 export const fetchLocation = (_lat, _long) => {
     return (dispatch) => {
@@ -26,5 +33,13 @@ export const fetchLocation = (_lat, _long) => {
             .catch((error) => dispatch(locationError(error)));
     }
 }
+
+export const fetchWeatherByCity = (data) => {
+    return (dispatch) => {
+        getWeatherByCityy(data).then((response) => dispatch(getWeatherByCity(response)))
+            .catch((error) => dispatch(getWeatherByCityErorr(error)));
+    }
+}
+
 
 

@@ -13,14 +13,14 @@ export const getWeatherByLocation = async (_lat, _long) => {
     }
 };
 
-export const getWeatherByCity  = async (data)=>{
+export const getWeatherByCityy  = async (data)=>{
     try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${_apiKey}`)
         return response.data
     } catch (err){
         console.error(err.toJSON())
     }
-}
+};
 
 
 
